@@ -1,0 +1,28 @@
+(1) If there are 2 files module1.mjs and module2.mjs
+    module2.mjs :
+    const a = "Kunal";
+    const b = "Shantaram"
+    const c = "Bhoi";
+    export default a;
+
+    module1.mjs :
+    import anything from './module2.mjs'
+    console.log(anything)
+
+    node .\module1.mjs   -- in terminal 
+    output : Kunal
+
+    export {b};  -- added to module1.mjs
+    export {c}; 
+
+    import anything, {b, c} from './module2.mjs'
+    console.log(anything)
+    console.log(b)
+    console.log(c)  
+
+    output : 
+    Kunal 
+    Shantaram 
+    Bhoi 
+
+
